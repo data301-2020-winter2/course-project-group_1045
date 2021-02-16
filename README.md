@@ -23,4 +23,4 @@ This data was extracted from the textbook "Machine Learning with R" by Brett Lan
 
 ## References
 
-{Add your stuff here}
+https://www.kaggle.com/mirichoi0218/insurance
