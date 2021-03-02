@@ -19,7 +19,7 @@ This data was extracted from the textbook "Machine Learning with R" by Brett Lan
 
 - Person 1: I'm Mitch, a computer science major from Calgary living in Kelowna currently.
 - Person 2: I'm Omar, a CS major interested in web and game development.
-- Person 3: one sentence about you!
+- Person 3: I'm Nolan, a CS major from calgary.
 
 ## References
 
