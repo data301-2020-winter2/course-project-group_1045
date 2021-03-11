@@ -15,6 +15,6 @@ But what if you wanted it ordered?
 
 Ok... but this is *seriously* missing something important
 
-![Pics/lounging-panda.jpg]
+!["Pics/lounging-panda.jpg"]
 
 Ahhhh, perfect! The world is back in order.
