@@ -10,7 +10,9 @@ def load_and_process(url_or_path_to_csv_file):
                            'children': 'Children', 'smoker': 'Smoker', 'region': 'Region',
                            'charges': 'Charges'})
           .dropna()
-          # etc...
+          .sort_values(by='Charges', ascending=False)
+          .reset_index()
+          .drop(columns='index')
       )
 
     # Method Chain 2 (Create new columns, drop others, and do processing)
@@ -18,6 +20,8 @@ def load_and_process(url_or_path_to_csv_file):
     df2 = (
           df1
           .assign(Body_Shape=get_body_shapes(df1))
+          .assign(Charges=df1['Charges'].astype(int), Bmi=df1['Bmi'].round(1), Region=df1['Region'].str.title())
+          .rename(columns={'Body_Shape': 'Body Shape'})
       )
 
     # Make sure to return the latest dataframe
@@ -66,5 +70,3 @@ def compare_smokers_to_bmi(df):
             new_data['Smokers'][data.loc[i]['Body_Shape']] += 1
 
     return new_data
-
-#### This is currently just a copy / paste from the course content, will add to it.
