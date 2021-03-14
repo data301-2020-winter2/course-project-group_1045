@@ -20,7 +20,7 @@ def load_and_process(url_or_path_to_csv_file):
     df2 = (
           df1
           .assign(Body_Shape=get_body_shapes(df1))
-          .assign(Charges=df1['Charges'].astype(int), Bmi=df1['Bmi'].round(1), Region=df1['Region'].str.title())
+          .assign(Charges=df1['Charges'].astype(int), BMI=df1['BMI'].round(1), Region=df1['Region'].str.title())
           .rename(columns={'Body_Shape': 'Body Shape'})
       )
 
