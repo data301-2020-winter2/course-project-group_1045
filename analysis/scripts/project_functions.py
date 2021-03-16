@@ -53,7 +53,7 @@ def get_body_shapes(df):
     return body_shapes
 
 def compare_smokers_to_bmi(df):
-    data = df[['Smoker', 'Body_Shape']]
+    data = df[['Smoker', 'Body Shape']]
     
     new_data = pd.DataFrame([[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]],
                         index=['Under Weight', 'Normal Weight', 'Over Weight', 'Class 1 Obesity', 'Class 2 Obesity', 'Class 3 Obesity'],
@@ -61,12 +61,12 @@ def compare_smokers_to_bmi(df):
 
 
     for i in range(len(data)):
-        new_data['Population'][data.loc[i]['Body_Shape']] += 1
+        new_data['Population'][data.loc[i]['Body Shape']] += 1
         
-        if data.loc[i]['Smoker'] == 'no':
-            new_data['Non-Smokers'][data.loc[i]['Body_Shape']] += 1
+        if data.loc[i]['Smoker'] == 'No':
+            new_data['Non-Smokers'][data.loc[i]['Body Shape']] += 1
     
         else:
-            new_data['Smokers'][data.loc[i]['Body_Shape']] += 1
+            new_data['Smokers'][data.loc[i]['Body Shape']] += 1
 
     return new_data
